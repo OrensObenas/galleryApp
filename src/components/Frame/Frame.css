@@ -1,0 +1,16 @@
+.frame__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #c4b2bc;
+    width: 180px;
+    height: 180px;
+}
+.frame__container img{
+    width: 75px;
+    height: 75px;
+}
+.frame__container h3{
+    font-size: 22px;
+}

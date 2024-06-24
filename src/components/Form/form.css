@@ -5,13 +5,13 @@
 }
 
 .form__asideLeft {
-    width: 300px;
-    height: 100vh;
+    width: 25%;
+    height: 100%;
     background-color: #456990;
     display: flex;
     flex-direction: column;
     padding: 50px 15px;
-    border-radius: 0 200px 200px 0;
+    border-radius: 30px 200px 200px 30px;
 }
 .form__asideLeft h2{
     margin-left: 15px;
