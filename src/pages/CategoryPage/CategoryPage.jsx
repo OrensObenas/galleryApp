@@ -6,12 +6,8 @@ import './categoryPage.css'
 const CategoryPage = () => {
   return (
     <>
-      <div className="app_main">
-        <div className="app__container">
           <Form />
           <GalleryRight />
-        </div>
-      </div>
     </>
   )
 }

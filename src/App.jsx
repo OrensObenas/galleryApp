@@ -1,11 +1,16 @@
 import React from "react"
-import CategoryPage from "./pages/CategoryPage/CategoryPage"
+import ImagePage from "./pages/ImagePage/ImagePage"
+import './style.css'
 
 function App() {
 
   return (
     <>
-      <CategoryPage />
+      <div className="app_main">
+        <div className="app__container">
+          <ImagePage />
+        </div>
+      </div>
     </>
   )
 }
