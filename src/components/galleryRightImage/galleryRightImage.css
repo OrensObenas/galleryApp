@@ -18,7 +18,18 @@
     width: 100%;
     height: 90%;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column; 
-    background-color: red;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+    -ms-overflow-style: none;
+}
+.galleryRightImage__container .galleryRightImage__body::-webkit-scrollbar{
+    display: none;
+}
+.galleryRightImage__container .galleryRightImage__body > *{
+    margin: 10px;
+    width: 22%;
+
+    box-sizing: border-box;
 }

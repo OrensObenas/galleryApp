@@ -17,6 +17,11 @@ const GalleryRightImage = () => {
           <ImageFrame />
           <ImageFrame />
           <ImageFrame />
+          <ImageFrame />
+          <ImageFrame />
+          <ImageFrame />
+          <ImageFrame />
+          <ImageFrame />
         </div>
       </div>
     </>
