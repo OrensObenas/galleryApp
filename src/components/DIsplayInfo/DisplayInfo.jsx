@@ -1,11 +1,14 @@
 import React from 'react'
-import './displayInfo.css'
 import User from '../../assets/User.jpg'
+import cross from '../../assets/cross.svg'
+import './displayInfo.css'
 
 const DisplayInfo = () => {
   return (
     <>
       <div className='displayInfo__main'>
+          <div className='displayInfo__cross'>
+          </div>
         <div className='displayInfo__container'>
             <div className='displayInfo__sideLeft'>
                 <h2>Title</h2>
