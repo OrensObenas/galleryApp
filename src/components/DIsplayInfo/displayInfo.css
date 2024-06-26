@@ -8,19 +8,30 @@
     backdrop-filter: blur(15px);
     border-radius: 25px;
     display: none;
-    flex-direction: column;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
-
+    padding: 10px;
+}
+.displayInfo__main .displayInfo__cross{
+    position: relative;
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.displayInfo__main .displayInfo__cross .displayInfo__buttoncross{
+    width: 50px;
+    height: 50px;
 }
 .displayInfo__main .displayInfo__container{
     position: relative;
     display: flex;
-    background-color: #08536a;
     border-radius: 25px;
+    background-color: #456990;
+
     width: 80%;
     height: 90%;
-
 }
 .displayInfo__main .displayInfo__container .displayInfo__sideLeft{
     width: 60%;

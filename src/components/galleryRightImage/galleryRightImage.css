@@ -10,9 +10,24 @@
     height: 10%;
     background-color: #456990;
     color: white;
-    text-align: center;
     border-radius: 0 150px 150px 150px;
-    padding-top: 17px;
+    padding-top: 10px;
+    display: flex;
+}
+.galleryRightImage__container .galleryRightImage__header div {
+    width: 46%;
+    padding-left: 15px;
+
+}
+.galleryRightImage__container .galleryRightImage__header div button{
+    background-color: red;
+    width: 85px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #000;
 }
 .galleryRightImage__container .galleryRightImage__body{
     width: 100%;

@@ -4,11 +4,23 @@ import cross from '../../assets/cross.svg'
 import './displayInfo.css'
 
 const DisplayInfo = () => {
+
+  const handleClick = () => {
+    const displayInfo__main = document.querySelector('.displayInfo__main'),
+          display = getComputedStyle(displayInfo__main, null).display
+
+          displayInfo__main.style.display = 'none'
+
+  }
+
   return (
     <>
       <div className='displayInfo__main'>
-          <div className='displayInfo__cross'>
+        <div className='displayInfo__cross'>
+          <div className='displayInfo__buttoncross' onClick={handleClick}>
+            <img src={cross} alt='cross' className='displayInfo__crossimg' />
           </div>
+        </div>
         <div className='displayInfo__container'>
             <div className='displayInfo__sideLeft'>
                 <h2>Title</h2>

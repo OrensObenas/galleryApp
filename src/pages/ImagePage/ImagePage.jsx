@@ -1,12 +1,18 @@
 import React from 'react'
 import Form from '../../components/Form/Form'
 import GalleryRightImage from '../../components/galleryRightImage/GalleryRightImage'
+import DisplayInfo from '../../components/DIsplayInfo/DisplayInfo'
 
 const ImagePage = () => {
   return (
     <>
-      <Form />
-      <GalleryRightImage />
+      <div className="app_main">
+        <DisplayInfo />
+        <div className="app__container">
+          <Form />
+          <GalleryRightImage />
+        </div>
+      </div>
     </>
   )
 }

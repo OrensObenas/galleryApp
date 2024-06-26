@@ -8,9 +8,11 @@ const GalleryRightImage = () => {
     <>
       <div className='galleryRightImage__container'>
         <div className='galleryRightImage__header'>
-            <Link to='/'>
-              <button>Back</button>
-            </Link>
+            <div>
+              <Link to='/'>
+                <button>Back</button>
+              </Link>
+            </div>
             <h2>Other</h2>
         </div>
         <div className='galleryRightImage__body'>

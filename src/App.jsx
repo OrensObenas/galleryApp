@@ -10,17 +10,12 @@ function App() {
 
   return (
     <>
-      <div className="app_main">
-        <DisplayInfo />
-        <div className="app__container">
           <Router>
             <Routes>
               <Route path="/" element={<CategoryPage />} />
               <Route path="/displayImage" element={<ImagePage />} />
             </Routes>
           </Router>
-        </div>
-      </div>
     </>
   )
 }
