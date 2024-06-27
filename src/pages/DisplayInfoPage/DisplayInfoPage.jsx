@@ -12,11 +12,12 @@ const DisplayInfoPage = () => {
   const category = query.get("category");
   const title = query.get("title");
   const description = query.get("description");
+  const image = query.get("image");
 
   return (
     <>
       <div className="app_main_display">
-        <DisplayInfo category={category} title={title} description={description} />
+        <DisplayInfo category={category} title={title} description={description} image={image} />
         <div className="app__container_display">
         </div>
       </div>

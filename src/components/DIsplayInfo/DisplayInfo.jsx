@@ -29,7 +29,7 @@ const DisplayInfo = (props) => {
         <div className='displayInfo__container'>
             <div className='displayInfo__sideLeft'>
                 <h2>{props.title} </h2>
-                <img src={User} alt='your big Image'/>
+                <img src={props.image} alt='your big Image'/>
             </div>
             <div className='displayInfo__sideRight'>
                     <h2>Description</h2>

@@ -5,13 +5,12 @@ import { Link } from 'react-router-dom'
 
 const ImageFrame = (props) => {
  
-  const href = `/displayInformation?category=${props.category}&title=${props.title}&description=${props.description}&image=${props.image}`
   
   const myImage = JSON.stringify(props.image)
   const myImage2 = JSON.parse(myImage)
-
+  
   const mylink = Object.values(myImage2)
-  console.log(myImage)
+  const href = `/displayInformation?category=${props.category}&title=${props.title}&description=${props.description}&image=${mylink}`
 
   return (
     <>
