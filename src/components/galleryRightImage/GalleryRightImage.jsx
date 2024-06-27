@@ -17,20 +17,19 @@ const GalleryRightImage = (props) => {
       return {
         title: item.title,
         description: item.description,
-        ref: item.ref
+        image: item.image
       };
     });
   };
+
 
   let infoCategories = filtrerParCategorie(categorie).flatMap(cat => recueillirInformations(cat.items))
   
   let rendu = (infoCategories) => {
     return infoCategories.map(infoCategorie => {
-      return <ImageFrame key={infoCategorie.title} title={infoCategorie.title} ref={infoCategorie.ref} description={infoCategorie.description} setInfoframe ={props.setInfoframe} />
+      return <ImageFrame key={infoCategorie.title} title={infoCategorie.title} image={infoCategorie.image} description={infoCategorie.description} category={categorie} setInfoframe ={props.setInfoframe} infoframe={props.infoframe} />
     })
   }
-
-  console.log(rendu(infoCategories))
   return (
     <>
       <div className='galleryRightImage__container'>
@@ -43,18 +42,6 @@ const GalleryRightImage = (props) => {
             <h2>{categorie}</h2>
         </div>
         <div className='galleryRightImage__body'>
-          {/* <ImageFrame />
-          <ImageFrame />
-          <ImageFrame />
-          <ImageFrame />
-          <ImageFrame />
-          <ImageFrame />
-          <ImageFrame />
-          <ImageFrame />
-          <ImageFrame />
-          <ImageFrame />
-          <ImageFrame />
-          <ImageFrame /> */}
           {rendu(infoCategories)}
         </div>
       </div>

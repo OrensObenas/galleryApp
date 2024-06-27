@@ -1,38 +1,31 @@
 import React from 'react'
 import user from '../../assets/User.jpg'
 import './imageFrame.css'
+import { Link } from 'react-router-dom'
 
 const ImageFrame = (props) => {
+ 
+  const href = `/displayInformation?category=${props.category}&title=${props.title}&description=${props.description}&image=${props.image}`
+  
+  const myImage = JSON.stringify(props.image)
+  const myImage2 = JSON.parse(myImage)
 
-  const handleClick = () => {
-    const displayInfo__main = document.querySelector('.displayInfo__main'),
-          display = getComputedStyle(displayInfo__main, null).display
-
-          displayInfo__main.style.display = 'flex'
-
-          props.setInfoframe(
-            {
-              title : props.title,
-              description : props.description,
-              ref : props.ref
-            }
-          )
-      }  
-    
-
-  console.log(props.title)
+  const mylink = Object.values(myImage2)
+  console.log(myImage)
 
   return (
     <>
-      <div className='ImageFrame__container' onClick={handleClick}>
-        <div className='ImageFrame__header'>
-            <h2>{props.title}</h2>
-            <button>Learn more</button>
+      <Link to={href}>
+        <div className='ImageFrame__container'>
+          <div className='ImageFrame__header'>
+              <h2>{props.title}</h2>
+              <button>Learn more</button>
+          </div>
+          <div className='ImageFrame__image'>
+              <img src={mylink} alt='Our image' />
+          </div>
         </div>
-        <div className='ImageFrame__image'>
-            <img src={props.ref} alt='Our image' />
-        </div>
-      </div>
+      </Link>
     </>
   )
 }

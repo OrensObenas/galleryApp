@@ -2,6 +2,7 @@ import React from 'react'
 import User from '../../assets/User.jpg'
 import cross from '../../assets/cross.svg'
 import './displayInfo.css'
+import { Link } from 'react-router-dom'
 
 const DisplayInfo = (props) => {
 
@@ -12,24 +13,28 @@ const DisplayInfo = (props) => {
           displayInfo__main.style.display = 'none'
 
   }
-    console.log(props)
+
+  const category = props.category;
+  const backhref = `/displayImage?category=${category}`
   return (
     <>
       <div className='displayInfo__main'>
         <div className='displayInfo__cross'>
-          <div className='displayInfo__buttoncross' onClick={handleClick}>
+        <Link to={backhref}>
+          <div className='displayInfo__buttoncross'>
             <img src={cross} alt='cross' className='displayInfo__crossimg' />
           </div>
+        </Link>
         </div>
         <div className='displayInfo__container'>
             <div className='displayInfo__sideLeft'>
-                <h2>bois </h2>
-                <img src='' alt='your big Image'/>
+                <h2>{props.title} </h2>
+                <img src={User} alt='your big Image'/>
             </div>
             <div className='displayInfo__sideRight'>
                     <h2>Description</h2>
                 <div className='displayInfo__description'>
-                    <p></p>
+                    <p>{props.description}</p>
                 </div>
             </div>
         </div>

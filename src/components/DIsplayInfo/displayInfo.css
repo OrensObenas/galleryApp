@@ -7,7 +7,7 @@
     background-color: rgba(0, 0, 0, 0.393);
     backdrop-filter: blur(15px);
     border-radius: 25px;
-    display: none;
+    display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;

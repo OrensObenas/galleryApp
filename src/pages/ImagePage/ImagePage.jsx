@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Form from '../../components/Form/Form'
 import GalleryRightImage from '../../components/galleryRightImage/GalleryRightImage'
-import DisplayInfo from '../../components/DIsplayInfo/DisplayInfo'
 import { useLocation } from 'react-router-dom'
 
 const ImagePage = (props) => {
@@ -43,10 +42,9 @@ const ImagePage = (props) => {
   return (
     <>
       <div className="app_main">
-        <DisplayInfo infoFrame={infoFrame} />
         <div className="app__container">
           <Form />
-          <GalleryRightImage category={category} contenuParCategorie={contenuParCategorie} setInfoFrame={setInfoFrame} />
+          <GalleryRightImage category={category} contenuParCategorie={contenuParCategorie} setInfoFrame={setInfoFrame} infoFrame={infoFrame} />
         </div>
       </div>
     </>
