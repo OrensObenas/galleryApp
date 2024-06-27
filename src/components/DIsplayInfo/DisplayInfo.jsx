@@ -3,7 +3,7 @@ import User from '../../assets/User.jpg'
 import cross from '../../assets/cross.svg'
 import './displayInfo.css'
 
-const DisplayInfo = () => {
+const DisplayInfo = (props) => {
 
   const handleClick = () => {
     const displayInfo__main = document.querySelector('.displayInfo__main'),
@@ -12,7 +12,7 @@ const DisplayInfo = () => {
           displayInfo__main.style.display = 'none'
 
   }
-
+    console.log(props)
   return (
     <>
       <div className='displayInfo__main'>
@@ -23,13 +23,13 @@ const DisplayInfo = () => {
         </div>
         <div className='displayInfo__container'>
             <div className='displayInfo__sideLeft'>
-                <h2>Title</h2>
-                <img src={User} alt='your big Image'/>
+                <h2>bois </h2>
+                <img src='' alt='your big Image'/>
             </div>
             <div className='displayInfo__sideRight'>
                     <h2>Description</h2>
                 <div className='displayInfo__description'>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor </p>
+                    <p></p>
                 </div>
             </div>
         </div>

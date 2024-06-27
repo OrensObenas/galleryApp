@@ -1,23 +1,45 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Input from '../Input/Input'
 import image from '../../assets/image.png'
 import './form.css'
 
-const Form = () => {
+const Form = (props) => {
+
+  const [imageTitle, setImageTitle] = useState("")
+  const [imageDescription, setImageDescription] = useState("")
+  const [imageSection, setImageSection] = useState("")
+
+  const handlesubmit = (e) => {
+
+    const myobjet = {
+      title : {imageTitle},
+      description : {imageDescription},
+      ref : '',
+      category : {imageSection}
+    }
+
+    props.setFormCallback([...props.contenu ,myobjet])
+
+  }
+
+  const handleSectionChange = () =>{
+    setImageSection(e.target.value)
+  }
+
   return (
     <>
       <div className='form__asideLeft'>
         <h2>ADD IMAGE</h2>
-        <form>
-           <div className='form__containerImage'>
+        <form onSubmit={handlesubmit}>
+           <div className='form__containerImage'> bfhg
             <img src={image} alt='Choose Images'/>
            </div>
           <div className='form__yourform' >
-            <Input id='name' label='Image Name' placeholder='Choose a name for your image...' />
-            <Input id='description' label='Description' placeholder='Your description' />
+            <Input id='name' label='Image Name' placeholder='Choose a name for your image...' value={imageTitle} callback={setImageTitle}/>
+            <Input id='description' label='Description' placeholder='Your description' value={imageDescription} callback={setImageDescription}/>
             <div className='form__select'>
               <label htmlFor='categorie'>Categorie</label>
-              <select id='categorie'>
+              <select id='categorie' value={imageSection} onChange={handleSectionChange}>
                 <option value="Other">Other</option>
                 <option value="Car">Car</option>
                 <option value="Women">Women</option>
