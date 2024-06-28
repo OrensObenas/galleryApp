@@ -16,7 +16,7 @@ const Form = (props) => {
     const myobjet = {
       title: imageTitle,
       description: imageDescription,
-      ref: preview,
+      image: {preview},
       category: imageSection
     };
 
