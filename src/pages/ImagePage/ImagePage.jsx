@@ -36,7 +36,7 @@ const ImagePage = (props) => {
     <div className="app_main">
       <div className="app__container">
         <Form callback={props.setFormCallback} formCallback={props.formCallback} />
-        <GalleryRightImage category={category} contenuParCategorie={contenuParCategorie} setInfoFrame={setInfoFrame} infoFrame={infoFrame} />
+        <GalleryRightImage category={category} contenuParCategorie={contenuParCategorie} setInfoFrame={setInfoFrame} infoFrame={infoFrame} setFormCallback={props.setFormCallback} formCallback={props.formCallback}/>
       </div>
     </div>
   );

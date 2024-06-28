@@ -8,6 +8,8 @@ const GalleryRightImage = (props) => {
   const categorie = props.category
   const contenu = props.contenuParCategorie
 
+
+
   const filtrerParCategorie = (categorie) => {
     return contenu.filter(cat => cat.category === categorie);
   };
@@ -27,7 +29,7 @@ const GalleryRightImage = (props) => {
   
   let rendu = (infoCategories) => {
     return infoCategories.map(infoCategorie => {
-      return <ImageFrame key={infoCategorie.title} title={infoCategorie.title} image={infoCategorie.image} description={infoCategorie.description} category={categorie} setInfoframe ={props.setInfoframe} infoframe={props.infoframe} />
+      return <ImageFrame key={infoCategorie.title} title={infoCategorie.title} image={infoCategorie.image} description={infoCategorie.description} category={categorie} setInfoframe ={props.setInfoframe} infoframe={props.infoframe} setFormCallback={props.setFormCallback} formCallback={props.formCallback}/>
     })
   }
   return (
