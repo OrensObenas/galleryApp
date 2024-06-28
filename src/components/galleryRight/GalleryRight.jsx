@@ -7,12 +7,23 @@ import women from '../../assets/women.png'
 import { Link } from 'react-router-dom'
 import './galleryRight.css'
 
-const GalleryRight = () => {
+const GalleryRight = (props) => {
+
+  const handleResetClick = () => {
+    props.callback(props.initialContent)
+  }
+
+  console.log(props.initialContent)
   return (
     <>
       <div className='galleryRight__container'>
         <div className='galleryRight__header'>
-            <h2>Gallery</h2>
+            <div>
+              <h2>Gallery</h2>
+            </div>
+            <div>
+              <button onClick={handleResetClick}>Reset</button>
+            </div>
         </div>
         <div className='galleryRight__body'>
           <div>

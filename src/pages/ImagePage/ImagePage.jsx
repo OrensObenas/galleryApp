@@ -23,7 +23,7 @@ const ImagePage = (props) => {
     });
   };
 
-  let contenuTrie = trierParCategorie(props.formCallback);
+  let contenuTrie = trierParCategorie(props.contenu);
   const categories = [...new Set(contenuTrie.map(item => item.category))];
   const contenuParCategorie = categories.map(category => {
     return {
@@ -35,8 +35,8 @@ const ImagePage = (props) => {
   return (
     <div className="app_main">
       <div className="app__container">
-        <Form callback={props.setFormCallback} formCallback={props.formCallback} />
-        <GalleryRightImage category={category} contenuParCategorie={contenuParCategorie} setInfoFrame={setInfoFrame} infoFrame={infoFrame} setFormCallback={props.setFormCallback} formCallback={props.formCallback}/>
+        <Form callback={props.setContenu} formCallback={props.contenu} />
+        <GalleryRightImage category={category} contenuParCategorie={contenuParCategorie} setInfoFrame={setInfoFrame} infoFrame={infoFrame} setFormCallback={props.setContenu} formCallback={props.contenu}/>
       </div>
     </div>
   );

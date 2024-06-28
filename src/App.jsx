@@ -73,7 +73,7 @@ import women8 from './assets/women8.jpg'
 import women9 from './assets/women9.jpg'
 import women10 from './assets/women10.jpg'
 
-let contenu = [
+let initialContent = [
   {
     title : 'Éclat naturel',
     description : "Une femme noire aux cheveux bouclés et à la peau éclatante pose avec assurance. La lumière met en valeur ses traits magnifiques.",
@@ -480,29 +480,24 @@ let contenu = [
 
 function App() {
   
-  const [formCallback, setFormCallback] = useState(contenu)
+  const [contenu, setContenu] = useState(() => {
+    // Récupérer les données depuis le localStorage ou utiliser initialContent
+    const savedContent = localStorage.getItem('contenu');
+    return savedContent ? JSON.parse(savedContent) : initialContent;
+  })
 
+  // Mettre à jour le localStorage chaque fois que contenu change
   useEffect(() => {
-    const storedContent = localStorage.getItem('formCallback');
-    if (storedContent) {
-      setFormCallback(JSON.parse(storedContent))
-    } else {
-      setFormCallback(contenu)
-    }
-  }, []);
+    localStorage.setItem('contenu', JSON.stringify(contenu));
+  }, [contenu]);
 
-  useEffect(() => {
-    localStorage.setItem('formCallback', JSON.stringify(formCallback));
-  }, [formCallback]);
-
-  console.log(formCallback)
   
   return (
     <>
           <Router>
             <Routes>
-              <Route path="/" element={<CategoryPage setFormCallback={setFormCallback} formCallback={formCallback} />} />
-              <Route path="/displayImage" element={<ImagePage setFormCallback={setFormCallback} formCallback={formCallback} />} />
+              <Route path="/" element={<CategoryPage setContenu={setContenu} contenu={contenu} initialContent={initialContent} />} />
+              <Route path="/displayImage" element={<ImagePage setContenu={setContenu} contenu={contenu} />} />
               <Route path="/displayInformation" element={<DisplayInfoPage />} />
             </Routes>
           </Router>
