@@ -10,7 +10,7 @@ const ImageFrame = (props) => {
   const myImage2 = JSON.parse(myImage)
   
   const mylink = Object.values(myImage2)
-  const href = `/displayInformation?category=${props.category}&title=${props.title}&description=${props.description}&image=${mylink}`
+  const href = `/displayInformation?category=${props.category}&title=${props.title}&description=${props.description}&image=${encodeURIComponent(mylink)}`
 
   return (
     <>

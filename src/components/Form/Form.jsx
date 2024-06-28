@@ -13,14 +13,24 @@ const Form = (props) => {
   const handlesubmit = (e) => {
     e.preventDefault();
 
-    const myobjet = {
-      title: imageTitle,
-      description: imageDescription,
-      image: {preview},
-      category: imageSection
-    };
+    if(imageTitle != '' && imageDescription != '' && preview != '' ){
 
-    props.callback([...props.formCallback, myobjet]);
+      const myobjet = {
+        title: imageTitle,
+        description: imageDescription,
+        image: {preview},
+        category: imageSection
+      };
+  
+      props.callback([...props.formCallback, myobjet]);
+
+      setImageTitle("");
+      setImageDescription("");
+      setImageSection("other");
+      setPreview(null);
+      setSelectedFile(null);
+    }
+
   };
 
   const handleSectionChange = (e) => {
