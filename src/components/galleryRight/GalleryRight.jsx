@@ -16,18 +16,18 @@ const GalleryRight = () => {
         </div>
         <div className='galleryRight__body'>
           <div>
-            <Link to="/displayImage?category=car">
+            <Link to="/displayImage?category=car" className='link'>
               <Frame road={car} title="car"/>
             </Link>
-            <Link to="/displayImage?category=women">
+            <Link to="/displayImage?category=women" className='link'>
               <Frame road={women} title="women"/>
             </Link>
           </div>
           <div>
-            <Link to="/displayImage?category=floor">
+            <Link to="/displayImage?category=floor" className='link'>
               <Frame road={floor} title="floor"/>
             </Link>
-            <Link to="/displayImage?category=other">
+            <Link to="/displayImage?category=other" className='link'>
               <Frame road={other} title="other"/>
             </Link>
           </div>

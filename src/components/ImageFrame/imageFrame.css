@@ -21,12 +21,13 @@
 .ImageFrame__container .ImageFrame__header button{
     font-size: 16px;
     border-radius: 5px;
-    height: 30px;
+    height: 40px;
     width: 85px;
     background-color: #1e152a;
     color: white;
     border: none;
     outline: none;
+    cursor: pointer;
 }
 .ImageFrame__container .ImageFrame__image{
     width: 100%;

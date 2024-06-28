@@ -14,7 +14,7 @@ const ImageFrame = (props) => {
 
   return (
     <>
-      <Link to={href}>
+      <Link to={href} className='link'>
         <div className='ImageFrame__container'>
           <div className='ImageFrame__header'>
               <h2>{props.title}</h2>

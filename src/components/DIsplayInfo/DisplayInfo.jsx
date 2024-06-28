@@ -12,7 +12,7 @@ const DisplayInfo = (props) => {
     <>
       <div className='displayInfo__main'>
         <div className='displayInfo__cross'>
-        <Link to={backhref}>
+        <Link to={backhref} className='link'>
           <div className='displayInfo__buttoncross'>
             <img src={cross} alt='cross' className='displayInfo__crossimg' />
           </div>

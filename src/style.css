@@ -14,3 +14,7 @@
     height: 95%;
     border-radius: 30px;
 }
+.link{
+    text-decoration: none;
+    color: #1e152a;
+}
