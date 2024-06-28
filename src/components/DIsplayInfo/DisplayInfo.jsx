@@ -6,14 +6,6 @@ import { Link } from 'react-router-dom'
 
 const DisplayInfo = (props) => {
 
-  const handleClick = () => {
-    const displayInfo__main = document.querySelector('.displayInfo__main'),
-          display = getComputedStyle(displayInfo__main, null).display
-
-          displayInfo__main.style.display = 'none'
-
-  }
-
   const category = props.category;
   const backhref = `/displayImage?category=${category}`
   return (

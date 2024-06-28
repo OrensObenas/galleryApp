@@ -193,13 +193,12 @@ function App() {
   ]
   const [formCallback, setFormCallback] = useState(contenu)
   
-
   return (
     <>
           <Router>
             <Routes>
-              <Route path="/" element={<CategoryPage setFormCallback={setFormCallback} formCallback={formCallback} contenu={contenu} />} />
-              <Route path="/displayImage" element={<ImagePage formCallback={formCallback} />} />
+              <Route path="/" element={<CategoryPage setFormCallback={setFormCallback} formCallback={formCallback} />} />
+              <Route path="/displayImage" element={<ImagePage setFormCallback={setFormCallback} formCallback={formCallback} />} />
               <Route path="/displayInformation" element={<DisplayInfoPage />} />
             </Routes>
           </Router>

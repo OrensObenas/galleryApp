@@ -1,19 +1,16 @@
-import React, { useState } from 'react'
-import Form from '../../components/Form/Form'
-import GalleryRightImage from '../../components/galleryRightImage/GalleryRightImage'
-import { useLocation } from 'react-router-dom'
+import React, { useState } from 'react';
+import Form from '../../components/Form/Form';
+import GalleryRightImage from '../../components/galleryRightImage/GalleryRightImage';
+import { useLocation } from 'react-router-dom';
 
 const ImagePage = (props) => {
-
-  const [infoFrame, setInfoFrame] = useState(null)
-  const location = useLocation()
-  const { pathname, search, hash, state } = location;
+  const [infoFrame, setInfoFrame] = useState(null);
+  const location = useLocation();
+  const { search } = location;
 
   const query = new URLSearchParams(search);
-
   const category = query.get("category");
 
-  
   const trierParCategorie = (array) => {
     return array.sort((a, b) => {
       if (a.category < b.category) {
@@ -24,31 +21,25 @@ const ImagePage = (props) => {
       }
       return 0;
     });
-  };  
-  // Trier le tableau
+  };
+
   let contenuTrie = trierParCategorie(props.formCallback);
-  
-  // Structurer les données par catégorie
   const categories = [...new Set(contenuTrie.map(item => item.category))];
-  
   const contenuParCategorie = categories.map(category => {
     return {
       category: category,
       items: contenuTrie.filter(item => item.category === category)
     };
   });
-  
 
   return (
-    <>
-      <div className="app_main">
-        <div className="app__container">
-          <Form />
-          <GalleryRightImage category={category} contenuParCategorie={contenuParCategorie} setInfoFrame={setInfoFrame} infoFrame={infoFrame} />
-        </div>
+    <div className="app_main">
+      <div className="app__container">
+        <Form callback={props.setFormCallback} formCallback={props.formCallback} />
+        <GalleryRightImage category={category} contenuParCategorie={contenuParCategorie} setInfoFrame={setInfoFrame} infoFrame={infoFrame} />
       </div>
-    </>
-  )
+    </div>
+  );
 }
 
-export default ImagePage
+export default ImagePage;
