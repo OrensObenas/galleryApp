@@ -72,6 +72,7 @@ import women7 from './assets/women7.jpg'
 import women8 from './assets/women8.jpg'
 import women9 from './assets/women9.jpg'
 import women10 from './assets/women10.jpg'
+import FormPage from "./pages/FormPage/FormPage"
 
 let initialContent = [
   {
@@ -499,6 +500,7 @@ function App() {
               <Route path="/" element={<CategoryPage setContenu={setContenu} contenu={contenu} initialContent={initialContent} />} />
               <Route path="/displayImage" element={<ImagePage setContenu={setContenu} contenu={contenu} />} />
               <Route path="/displayInformation" element={<DisplayInfoPage />} />
+              <Route path="/form" element={<FormPage setContenu={setContenu} contenu={contenu} />} />
             </Routes>
           </Router>
     </>

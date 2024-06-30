@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
 
-    width: 75%;
+    width: 100%;
     height: 100%;
 }
 .galleryRightImage__container .galleryRightImage__header{
@@ -39,13 +39,14 @@
     justify-content: center;
     overflow: auto;
     -ms-overflow-style: none;
+    gap: 15px;
+    margin-top: 15pxform-container;
 }
 .galleryRightImage__container .galleryRightImage__body::-webkit-scrollbar{
     display: none;
 }
 .galleryRightImage__container .galleryRightImage__body > *{
-    margin: 10px;
-    width: calc(25% - 20px);
+
 
     box-sizing: border-box;
 }

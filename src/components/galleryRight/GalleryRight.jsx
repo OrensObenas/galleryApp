@@ -19,10 +19,15 @@ const GalleryRight = (props) => {
       <div className='galleryRight__container'>
         <div className='galleryRight__header'>
             <div>
-              <h2>Gallery</h2>
+              <button onClick={handleResetClick}>Reset</button>
             </div>
             <div>
-              <button onClick={handleResetClick}>Reset</button>
+              <h2>Gallery</h2>
+            </div>
+            <div className='element'>
+              <Link to="/form" className='link'>
+                <button>Add Element</button>
+              </Link>
             </div>
         </div>
         <div className='galleryRight__body'>
